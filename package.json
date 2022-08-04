@@ -1,7 +1,7 @@
 {
-  "name": "discord-v14-builder",
-  "version": "0.0.3",
-  "description": "",
+  "name": "ctbuilder",
+  "version": "0.0.2",
+  "description": "Makes it easy to begin a discord.js bot project",
   "main": "index.js",
   "type": "module",
   "bin": {
