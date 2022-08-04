@@ -1,0 +1,21 @@
+{
+  "name": "discord-v14-builder",
+  "version": "0.0.3",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "builder": "./index.js"
+  },
+  "scripts": {
+    "builder": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.18.10",
+    "fs": "^0.0.1-security",
+    "inquirer": "^9.1.0"
+  }
+}

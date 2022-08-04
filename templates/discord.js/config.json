@@ -1,0 +1,11 @@
+{
+    "Bot": {
+        "Token": "",
+        "DBURL": ""
+    },
+    "Default": {
+        "developerGuild": ""
+    }
+    
+
+}
