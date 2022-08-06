@@ -5,10 +5,6 @@
 ![Logo](https://cdn.discordapp.com/attachments/934014780455415830/1004846520849399929/Untitled.png)
 
 
-## Demo
-
-![image](https://cdn.discordapp.com/attachments/934014780455415830/1004847954697400441/2022-08-04_22-24-58.gif)
-
 ## Installation
 
 ### Windows

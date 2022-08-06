@@ -1,10 +1,10 @@
 {
     "Bot": {
-        "Token": "",
-        "DBURL": ""
+        "Token": "Insert your bots token",
+        "DBURL": "If you have a mongodb Database, then put in your connection string"
     },
     "Default": {
-        "developerGuild": ""
+        "developerGuild": "The discord server id of your developer guild"
     }
     
 
