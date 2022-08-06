@@ -21,11 +21,11 @@
 
 2. Now you are ready to use my templates, all you need to do is run the command
 - NOTE: You need to run this in a git bash command promp, or in a windows commandPromp
-#### Git Bash
+### Git Bash
 ```bash
   $ builder
 ```
-#### Windows CommandPromp
+### Windows CommandPromp
 ```bash
   npx builder
 ```
