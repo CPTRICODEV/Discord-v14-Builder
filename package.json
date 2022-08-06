@@ -1,14 +1,14 @@
 {
   "name": "ctbuilder",
-  "version": "0.0.2",
-  "description": "Makes it easy to begin a discord.js bot project",
+  "version": "0.0.3",
+  "description": "Makes it easy to begin your projects",
   "main": "index.js",
   "type": "module",
   "bin": {
     "builder": "./index.js"
   },
   "scripts": {
-    "builder": "echo \"Error: no test specified\" && exit 1"
+    "test": "Test Working"
   },
   "keywords": [],
   "author": "",

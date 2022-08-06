@@ -56,5 +56,5 @@ inquirer.prompt(QUESTIONS).then(answers => {
   fs.mkdirSync(`${CURR_DIR}/${projectName}`);
 
   createDirectoryContents(templatePath, projectName);
-  spinner.success({ text: `Thx for using CT-Builder. \nYour Template is done, just use the npm run start in your project to start the bot!` });
+  spinner.success({ text: `Thx for using CT-Builder. \nYour Template is done, just use the "npm run start" in your project to start!` });
 });
