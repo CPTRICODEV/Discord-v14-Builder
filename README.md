@@ -11,7 +11,7 @@
 
 ## Installation
 
-#### Windows
+### Windows
 
 1. You need to install my package
 
@@ -21,16 +21,16 @@
 
 2. Now you are ready to use my templates, all you need to do is run the command
 - NOTE: You need to run this in a git bash command promp, or in a windows commandPromp
-### Git Bash
+#### Git Bash
 ```bash
   $ builder
 ```
-### Windows CommandPromp
+#### Windows CommandPromp
 ```bash
   npx builder
 ```
 
-#### macOS
+### macOS
 
 1. You need to install my package
 
