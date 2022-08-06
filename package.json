@@ -17,5 +17,11 @@
     "@babel/core": "^7.18.10",
     "fs": "^0.0.1-security",
     "inquirer": "^9.1.0"
+  },
+  "dependencies": {
+    "chalk": "^5.0.1",
+    "chalk-animation": "^2.0.2",
+    "gradient-string": "^2.0.1",
+    "nanospinner": "^1.1.0"
   }
 }
