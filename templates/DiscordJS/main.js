@@ -17,7 +17,7 @@ const client = new Client({
 
 // Makes some collections
 client.commands = new Collection();
-client.buttons = new Collection();
+
 
 // Get the config file, so we can use it. 
 client.config = require('./config.json');

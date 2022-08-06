@@ -1,6 +1,6 @@
 {
   "name": "ctbuilder",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Makes it easy to begin your projects",
   "main": "index.js",
   "type": "module",
@@ -15,13 +15,14 @@
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.18.10",
-    "fs": "^0.0.1-security",
-    "inquirer": "^9.1.0"
+    "fs": "^0.0.1-security"
+
   },
   "dependencies": {
     "chalk": "^5.0.1",
     "chalk-animation": "^2.0.2",
     "gradient-string": "^2.0.1",
-    "nanospinner": "^1.1.0"
+    "nanospinner": "^1.1.0",
+    "inquirer": "^9.1.0"
   }
 }
