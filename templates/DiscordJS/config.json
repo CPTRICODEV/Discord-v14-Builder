@@ -1,11 +1,9 @@
 {
-    "Bot": {
-        "Token": "Your discord bot token",
-        "DBURL": "Your MongoDB connection string"
-    },
-    "Default": {
-        "developerGuild": "Paste your discord developer guild in here, remeber the bot is need to be in the guild"
-    }
-    
-
+  "Bot": {
+    "Token": "YOUR_DISCORD_BOT_TOKEN",
+    "DBURL": "YOUR_MONGODB_CONNECTION_STRING"
+  },
+  "Default": {
+    "DeveloperGuild": "PASTE_YOUR_DISCORD_DEVELOPER_GUILD_HERE. REMEMBER, THE BOT NEEDS TO BE IN THE GUILD."
+  }
 }

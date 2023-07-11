@@ -1,82 +1,87 @@
-
-# CT - Builder
-
-
-![Logo](https://cdn.discordapp.com/attachments/934014780455415830/1004846520849399929/Untitled.png)
-
+# pjtoolkit
 
 ## Installation
 
 ### Windows
 
-1. You need to install my package
+To install pjtoolkit, follow these steps:
+
+1. Install the package globally using npm:
 
 ```bash
-  npm i -g ctbuilder
+  npx pjtoolkit
 ```
 
-2. Now you are ready to use my templates, all you need to do is run the command
-- NOTE: You need to run this in a git bash command promp, or in a windows commandPromp
+2. Once installed, you can use the pjtoolkit templates by running the following command:
+
+- Note: Run this command in a Git Bash command prompt or Windows Command Prompt.
+
 #### Git Bash
+
 ```bash
-  $ builder
+  $ pjtoolkit or npx pjtoolkit
 ```
-#### Windows CommandPromp
+
+#### Windows Command Prompt
+
 ```bash
-  npx builder
+  npx pjtoolkit
 ```
 
 ### macOS
 
-1. You need to install my package
+To install pjtoolkit on macOS, follow these steps:
+
+1. Install the package locally:
 
 ```bash
-  npm i -l ctbuilder
+  npx pjtoolkit
 ```
 
-2. Now you are ready to use my templates, all you need to do is run the command
-- NOTE: You need to open your terminal or run the command in VSCode
+2. Once installed, you can use the pjtoolkit templates by running the following command:
+
+- Note: Open your terminal or run the command in VSCode.
+
 ```bash
-  npx builder
+  npx pjtoolkit or pjtoolkit
 ```
 
-
-    
 ## FAQ
 
 #### Where can I get help?
 
-You can join my discord server and make a ticket, then I will answer as fast as I can
+If you need assistance or have any questions, you can join our Discord server and create a support ticket. We aim to respond promptly to help you.
 
-#### Can I come up with ideas
+#### Can I suggest ideas?
 
-Yeah sure if you have an idea you can make a ticket on my discord server.
+Absolutely! If you have any ideas or suggestions, you can submit a ticket on our Discord server. We value your input and appreciate your contributions.
 
-#### Discord Server:
-https://discord.gg/8Mkt2fV4K8
+#### Discord Server
+
+Join our Discord server: [CodeWithPadeHat Discord Server](https://discord.gg/PfkkCs3qdt)
 
 ## Changelog
+
 #### Changelog - Version 0.0.3
 
-- The user experience is getting better, theres is a new feedback system so you get a notification everytime the package do somting like creating a package. 
+- Improved user experience with a new feedback system. You will receive notifications for package actions, such as template creation.
 
-- The system will also run more clean, and the DiscordJS template is fixed and schuld work.
+- Enhancements to ensure a cleaner and more streamlined execution. The DiscordJS template has been fixed and should now work correctly.
 
 ## Roadmap
 
-- Support more command promps
+Our roadmap includes the following plans:
 
-- Add more templates
+- Support for additional command prompts.
 
-- More feedback
+- Expansion of available templates.
 
+- Continual improvement of feedback mechanisms.
 
 ## Feedback
 
-If you have any feedback, please reach out to me at my discord server: https://discord.gg/8Mkt2fV4K8
-
+We appreciate your feedback! If you have any suggestions, ideas, or feedback, please reach out to us on our Discord server: [CodeWithPadeHat Discord Server](https://discord.gg/PfkkCs3qdt)
 
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
-
+This project is licensed under the [MIT License](https://choosealicense.com/licenses/mit/)

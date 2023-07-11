@@ -1,23 +1,20 @@
-const { CommandInteraction } = require('discord.js')
+const { CommandInteraction } = require("discord.js");
 
 module.exports = {
-    name: "interactionCreate",
-    /**
-     * 
-     * @param {CommandInteraction} interaction
-     */
-    execute(interaction, client) {
-        if(!interaction.isChatInputCommand()) return;
+  name: "interactionCreate",
+  /**
+   *
+   * @param {CommandInteraction} interaction
+   */
+  execute(interaction, client) {
+    if (!interaction.isChatInputCommand()) return;
 
-        const command = client.commands.get(interaction.commandName);
+    const command = client.commands.get(interaction.commandName);
 
-        if(!command) {
-            return interaction.reply({content: "This command is outdated."});
-        }
-
-        command.execute(interaction, client)
-
-
-       
+    if (!command) {
+      return interaction.reply({ content: "This command is outdated." });
     }
-}
+
+    command.execute(interaction, client);
+  },
+};
