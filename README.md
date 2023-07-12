@@ -64,15 +64,14 @@ Join our Discord server: [CodeWithPadeHat Discord Server](https://discord.gg/Pfk
 
 #### Changelog - Version 0.0.3
 
-- Improved user experience with a new feedback system. You will receive notifications for package actions, such as template creation.
-
-- Enhancements to ensure a cleaner and more streamlined execution. The DiscordJS template has been fixed and should now work correctly.
+- Added 6 new commands for you all to enjoy. Some of the commands require a database, so please remember to add your database string in the config.json file.
+- Additionally, fixed various bugs and made several improvements to enhance the user experience.
 
 ## Roadmap
 
 Our roadmap includes the following plans:
 
-- Support for additional command prompts.
+- Add more commands
 
 - Expansion of available templates.
 

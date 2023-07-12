@@ -34,8 +34,8 @@ function loadCommands(client) {
   if (client.config.Default.developerGuild == "") {
     table.addRow("Developer Mode disabled", "X");
   } else {
-    developerGuild.commands.set(developerArray);
-    table.addRow("Developer Mode Enabled", "✓");
+    // developerGuild.commands.set(developerArray); This is a bug in the code and will get fixed!
+    table.addRow("Developer Mode Enabled", "X");
   }
 
   return console.log(table.toString(), "\nLoaded Commands");

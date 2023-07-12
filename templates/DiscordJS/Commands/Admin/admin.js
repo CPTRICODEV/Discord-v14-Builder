@@ -7,7 +7,7 @@ const {
 module.exports = {
   developer: false, // if you have setup a developer guild and you want to check the command out in your developer guild then set this to true!.
   data: new SlashCommandBuilder()
-    .setName("Admin")
+    .setName("admin")
     .setDescription("Reply to you with Pong!")
     .setDefaultMemberPermissions(
       PermissionFlagsBits.Administrator || PermissionFlagsBits.BanMembers
