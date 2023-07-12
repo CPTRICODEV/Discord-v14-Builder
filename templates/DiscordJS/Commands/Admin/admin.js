@@ -9,7 +9,9 @@ module.exports = {
   data: new SlashCommandBuilder()
     .setName("Admin")
     .setDescription("Reply to you with Pong!")
-    .setDefaultMemberPermissions(PermissionFlagsBits.Administrator), // this will set the permissions of the command, remove it if you want everyone to use it, leave it if you want only administrators to use the command.
+    .setDefaultMemberPermissions(
+      PermissionFlagsBits.Administrator || PermissionFlagsBits.BanMembers
+    ), // this will set the permissions of the command, remove it if you want everyone to use it, leave it if you want only administrators to use the command.
 
   /**
    *
@@ -17,6 +19,6 @@ module.exports = {
    */
 
   execute(interaction) {
-    interaction.reply("Pong!");
+    interaction.reply("This is a admin command with (MEMBER PERMISSIONS)");
   },
 };

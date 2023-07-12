@@ -1,27 +1,19 @@
-const {
-  SlashCommandBuilder,
-  PermissionFlagsBits,
-  ChatInputCommandInteraction,
-} = require("discord.js");
+const { SlashCommandBuilder, EmbedBuilder } = require("discord.js");
 
 module.exports = {
-  developer: false,
+  moderatorOnly: true,
   data: new SlashCommandBuilder()
-    .setName("user")
-    .setDescription("Ban a specific user")
-    .setDefaultMemberPermissions(PermissionFlagsBits.BanMembers)
-    .addUserOption((options) =>
-      options
-        .setName("ban")
-        .setDescription("ban a specific target")
-        .addUserOption((options) =>
-          options.setName("target").setDescription("Select a user")
-        )
-        .addStringOption((options) =>
-          options
-            .setName("reason")
-            .setDescription("Reson for banning the user?")
-        )
+    .setName("ban")
+    .setDescription("Ban a user from the discord server.")
+    .setDMPermission(false)
+    .addUserOption((option) =>
+      option
+        .setName("target")
+        .setDescription("User to be banned.")
+        .setRequired(true)
+    )
+    .addStringOption((option) =>
+      option.setName("reason").setDescription("Reason for the ban.")
     ),
 
   /**
@@ -29,16 +21,34 @@ module.exports = {
    * @param {ChatInputCommandInteraction} interaction
    */
 
-  execute(interaction, client) {
-    const user = interaction.options.getMember("target");
-    const member = interaction.options.getUser("target");
-    const reason = interaction.options.getString("reason");
-    interaction.reply({
-      content: `:wave: You have banned:  **${member.username}#${member.discriminator}** | Reason: ${reason}`,
-      ephemeral: true,
+  async execute(interaction) {
+    const { channel, options } = interaction;
+
+    const user = options.getUser("target");
+    const reason = options.getString("reason") || "No reason provided.";
+
+    const member = await interaction.guild.members.fetch(user.id);
+
+    const errEmbed = new EmbedBuilder()
+      .setDescription(
+        `You can't take action on ${user.username} since they have a higher role.`
+      )
+      .setColor(0xc72c3b);
+
+    if (
+      member.roles.highest.position >= interaction.member.roles.highest.position
+    )
+      return interaction.reply({ embeds: [errEmbed], ephemeral: true });
+
+    await member.ban({ reason });
+
+    const embed = new EmbedBuilder()
+      .setDescription(`Succesfully banned ${user} with reason: ${reason}`)
+      .setColor(0x5fb041)
+      .setTimestamp();
+
+    await interaction.reply({
+      embeds: [embed],
     });
-    setTimeout(() => {
-      user.ban();
-    }, 5000);
   },
 };
