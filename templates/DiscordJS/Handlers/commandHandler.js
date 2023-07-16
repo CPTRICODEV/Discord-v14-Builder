@@ -4,7 +4,6 @@ function loadCommands(client) {
   const table = new ascii().setHeading("Commands", "Status");
 
   let commandsArray = [];
-  let developerArray = [];
 
   const commandsFolders = fs.readdirSync("./Commands");
   for (const folder of commandsFolders) {
@@ -15,10 +14,10 @@ function loadCommands(client) {
     for (const file of commandFiles) {
       const commandFile = require(`../Commands/${folder}/${file}`);
 
-      client.commands.set(commandFile.data.name, commandFile);
+      const properties = { folder, ...commandFile };
+      client.commands.set(commandFile.data.name, properties);
 
-      if (commandFile.developer) developerArray.push(commandFile.data.toJSON());
-      else commandsArray.push(commandFile.data.toJSON());
+      commandsArray.push(commandFile.data.toJSON());
 
       table.addRow(file, "✓");
       continue;
@@ -26,17 +25,6 @@ function loadCommands(client) {
   }
 
   client.application.commands.set(commandsArray);
-
-  const developerGuild = client.guilds.cache.get(
-    client.config.Default.developerGuild
-  );
-
-  if (client.config.Default.developerGuild == "") {
-    table.addRow("Developer Mode disabled", "X");
-  } else {
-    // developerGuild.commands.set(developerArray); This is a bug in the code and will get fixed!
-    table.addRow("Developer Mode Enabled", "X");
-  }
 
   return console.log(table.toString(), "\nLoaded Commands");
 }

@@ -7,21 +7,14 @@ const {
 module.exports = {
   developer: false,
   data: new SlashCommandBuilder()
-    .setName("user")
+    .setName("kick")
     .setDescription("Kick a specific user")
     .setDefaultMemberPermissions(PermissionFlagsBits.KickMembers)
     .addUserOption((options) =>
-      options
-        .setName("Kick")
-        .setDescription("kick a specific target")
-        .addUserOption((options) =>
-          options.setName("target").setDescription("Select a user")
-        )
-        .addStringOption((options) =>
-          options
-            .setName("Reason")
-            .setDescription("Reason for kicking the user?")
-        )
+      options.setName("target").setDescription("select a specific target")
+    )
+    .addStringOption((options) =>
+      options.setName("reason").setDescription("Reason for kicking the user?")
     ),
 
   /**
