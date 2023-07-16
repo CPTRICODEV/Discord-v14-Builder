@@ -82,26 +82,3 @@ client.on(Events.InteractionCreate, async (interaction) => {
     });
   }
 });
-
-// Bug Report
-
-client.on(Events.InteractionCreate, async (interaction) => {
-  if (!interaction.isModalSubmit()) return;
-
-  if (interaction.customId === "command-bug") {
-    const description = interaction.fields.getTextInputValue("command-bug");
-    const status = interaction.fields.getTextInputValue("status-bug");
-    const member = interaction.member;
-
-    const channel = await client.channels.cache.get("1129518953476133005");
-
-    const formattedDescription = `\`${description}\``;
-    const formattedStatus = `\`${status}\``;
-
-    await channel
-      .send({
-        content: `**${formattedDescription}\n**Status: ${formattedStatus}\n**Submitted By: ${member}**`,
-      })
-      .catch((err) => {});
-  }
-});
