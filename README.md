@@ -1,5 +1,9 @@
 # pjtoolkit
 
+## Deprecated
+
+This project is no longer maintained and has been deprecated.
+
 ## Installation
 
 ### Windows
